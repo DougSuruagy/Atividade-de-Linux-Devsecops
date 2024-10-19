@@ -11,7 +11,7 @@ Este script verifica se o serviço especificado está online e gera logs indican
 
 ## Instalação
 1. Copie o script para um diretório de sua preferência.
-2. Edite o script `verificar_servico.sh` para definir o nome do serviço e o diretório de saída dos logs.
+2. Edite o script `servico_status.sh` para definir o nome do serviço e o diretório de saída dos logs.
 3. Configure o crontab para executar o script a cada 5 minutos:
    ```sh
    crontab -e
