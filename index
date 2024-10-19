@@ -1,0 +1,28 @@
+Verificando o Status da Configuração do Cron
+Você pode testar se o cron está funcionando conforme esperado e validando se o serviço está sendo verificado corretamente com os seguintes passos:
+
+Aguarde: Deixe passar cerca de 5 a 10 minutos para garantir que o cron job tenha tempo de rodar.
+
+Verifique o conteúdo dos logs: Use os seguintes comandos para ver o conteúdo dos arquivos de log que deveriam ser atualizados pelo cron:
+
+sh
+
+Copiar
+cat /var/logs/servico_status/servico_online.log
+cat /var/logs/servico_status/servico_offline.log
+Se o serviço estiver online, você verá mensagens no servico_online.log.
+
+Se o serviço estiver offline, verá mensagens no servico_offline.log.
+
+Forçar a execução do script manualmente: Execute o script manualmente para verificar se está funcionando como esperado:
+
+sh
+
+Copiar
+sudo /usr/local/bin/servico_status.sh
+Verificar os logs do cron: Veja os registros do cron para garantir que o cron job está sendo executado:
+
+sh
+
+Copiar
+grep CRON /var/log/syslog
